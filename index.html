@@ -9,110 +9,165 @@
 
 <body>
     <header class="web header">
-        <div class="brand">Series DB</div>
-        <nav>
-            <ul>
-                <li><a href="#" title="Descubre series y películas a tu gusto">Descubrir</a></li>
-                <li><a href="#" title="Catálogo de películas">Películas</a></li>
-                <li><a href="#" title="Catálogo de series">Serie</a></li>
-                <li><a href="#" title="Listado de actores y actrice de series y películas">Actores y actrices</a></li>
-            </ul>
-        </nav>
-        <form action="" class="search form">
-            <input type="search" id="search" name="q" placeholder="Buscar...">
-            <button type="search">Buscar</button>
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="brand">Series DB</div>
+                </div>
+                <div class="col-6">
+                    <nav class="main menu">
+                        <ul>
+                            <li><a href="#" title="Descubre series y películas a tu gusto">Descubrir</a></li>
+                            <li><a href="#" title="Catálogo de películas">Películas</a></li>
+                            <li><a href="#" title="Catálogo de series">Serie</a></li>
+                            <li><a href="#" title="Listado de actores y actrice de series y películas">Actores y actrices</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-3">
+                    <form action="" class="search form">
+                        <input type="search" id="search" name="q" placeholder="Buscar...">
+                        <button type="search">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="web main">
-        <section class="series media list">
-            <header class="series list header">
-                <h2 class="series list header title">Catálogo de Series</h2>
-            </header>
-            <article class="series media item">
-                <a href="#" class="series media link">
-                    <header class="series media header">
-                        <h3 class="series media title">SuperNatural</h3>
-                        <img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Carátula de Supernatural: Werestle Your Demons" title="Carátula de Supernatural">
-                    </header>
-                    <div class="meta">
-                        <div class="categories">
-                            <ul>
-                                <li>Drama</li>
-                                <li>Misterio</li>
-                            </ul>
-                        </div>
-                        <time class="realease date" datetime="2005-03-12" 2005></time>
-                        <div class="rating">7.1</div>
-                        <p class="overview ">
-                            Cuando eran niños, Sam y Dean Winchester, perdieron a su madre debido a una misteriosa y demoníaca fuerza supernatural. Posteriormente, su padre los crió para que…
-                        </p>
+        <div class="container">
+            <section class="series media list">
+                <header class="series list header">
+                    <h2 class="series list header title">Catálogo de Series</h2>
+                </header>
+                <div class="row">
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+
+                                <div class="row">
+                                    <div class="col-4">
+                                       <img src="https://image.tmdb.org/t/p/w185/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg" alt="Carátula de Supernatural: Werestle Your Demons" title="Carátula de Supernatural"> 
+                                    </div>
+                                    <div class="col-8">
+                                        <header class="series media header">
+                                    <h3 class="series media title">SuperNatural</h3>
+                                    
+                                    </header>
+                                    <div class="meta">
+                                        <div class="categories">
+                                            <ul>
+                                                <li>Drama</li>
+                                                <li>Misterio</li>
+                                            </ul>
+                                        </div>
+                                        <time class="realease date" datetime="2005-03-12" 2005></time>
+                                        <div class="rating">7.1</div>
+                                        <p class="overview ">
+                                            Cuando eran niños, Sam y Dean Winchester, perdieron a su madre debido a una misteriosa y demoníaca fuerza supernatural. Posteriormente, su padre los crió para que…
+                                        </p>
+                                    </div>
+                                        </div>
+                                </div>    
+                            </a>
+                        </article>
                     </div>
-                </a>
-            </article>
-            <article class="series media item">
-                <a href="#" class="series media link">
-                    <header class="series media header">
-                        <h3 class="series media title">The Walking Dead</h3>
-                        <img src="https://image.tmdb.org/t/p/w185/vxuoMW6YBt6UsxvMfRNwRl9LtWS.jpg" alt="Carátula de The Walking Dead" title="Carátula de The Walking Dead">
-                    </header>
-                    <div class="meta">
-                        <div class="categories">
-                            <ul>
-                                <li>Drama</li>
-                                <li>Terror</li>
-                            </ul>
-                        </div>
-                        <time class="realease date" datetime="2010-03-12" 2010></time>
-                        <div class="rating">7.5</div>
-                        <p class="overview ">
-                            "The Walking Dead" está ambientada en un futuro apocalíptico con la Tierra devastada por el efecto de un cataclismo, que ha provocado la mutación en zombies de la…
-                        </p>
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="https://image.tmdb.org/t/p/w185/vxuoMW6YBt6UsxvMfRNwRl9LtWS.jpg" alt="Carátula de The Walking Dead" title="Carátula de The Walking Dead">
+                                    </div>
+                                    <div class="col-8">
+                                        <header class="series media header">
+                                            <h3 class="series media title">The Walking Dead</h3>
+                                            
+                                        </header>
+                                        <div class="meta">
+                                            <div class="categories">
+                                                <ul>
+                                                    <li>Drama</li>
+                                                    <li>Terror</li>
+                                                </ul>
+                                            </div>
+                                            <time class="realease date" datetime="2010-03-12" 2010></time>
+                                            <div class="rating">7.5</div>
+                                            <p class="overview ">
+                                                "The Walking Dead" está ambientada en un futuro apocalíptico con la Tierra devastada por el efecto de un cataclismo, que ha provocado la mutación en zombies de la…
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div> 
+                                
+                                
+                            </a>
+                        </article>
                     </div>
-                </a>
-            </article>
-            <article class="series media item">
-                <a href="#" class="series media link">
-                    <header class="series media header">
-                        <h3 class="series media title">The Big Bang Theory</h3>
-                        <img src="https://image.tmdb.org/t/p/w185/wQoosZYg9FqPrmI4zeCLRdEbqAB.jpg" alt="Imagen de los personajes de Big Bang Theory" title="Carátula de The Big Bang Theory">
-                    </header>
-                    <div class="meta">
-                        <div class="categories">
-                            <ul>
-                                <li>Comedia</li>
-                            </ul>
-                        </div>
-                        <time class="realease date" datetime="2007-03-12" 2007></time>
-                        <div class="rating">7.4</div>
-                        <p class="overview ">
-                            The Big Bang Theory se centra en la vida de cinco personajes que residen en Pasadena, California: los compañeros de piso Leonard Hofstadter y Sheldon Cooper; su…
-                        </p>
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="https://image.tmdb.org/t/p/w185/wQoosZYg9FqPrmI4zeCLRdEbqAB.jpg" alt="Imagen de los personajes de Big Bang Theory" title="Carátula de The Big Bang Theory">
+                                    </div>
+                                    <div class="col-8">
+                                        <header class="series media header">
+                                            <h3 class="series media title">The Big Bang Theory</h3>
+                                            
+                                        </header>
+                                        <div class="meta">
+                                            <div class="categories">
+                                                <ul>
+                                                    <li>Comedia</li>
+                                                </ul>
+                                            </div>
+                                            <time class="realease date" datetime="2007-03-12" 2007></time>
+                                            <div class="rating">7.4</div>
+                                            <p class="overview ">
+                                                The Big Bang Theory se centra en la vida de cinco personajes que residen en Pasadena, California: los compañeros de piso Leonard Hofstadter y Sheldon Cooper; su…
+                                            </p>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </a>
                     </div>
-                </a>
-            </article>
-            <article class="series media item">
-                <a href="#" class="series media link">
-                    <header class="series media header">
-                        <h3 class="series media title">The Flash</h3>
-                        <img src="https://image.tmdb.org/t/p/w185/lUFK7ElGCk9kVEryDJHICeNdmd1.jpg" alt="Carátula de Flash" title="Carátula de Flash">
-                    </header>
-                    <div class="meta">
-                        <div class="categories">
-                            <ul>
-                                <li>Acción</li>
-                                <li>Aventura</li>
-                                <li>Drama</li>
-                            </ul>
-                        </div>
-                        <time class="realease date" datetime="2014-03-12" 2014></time>
-                        <div class="rating">7.1</div>
-                        <p class="overview ">
-                            Después de que un acelerador de partículas cause una extraña tormenta, al investigador científico de la policía, Barry Allen, le cae un rayo y entra en coma. Meses…
-                        </p>
+                    </article>
+                    <div class="col-6">
+                        <article class="series media item">
+                            <a href="#" class="series media link">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="https://image.tmdb.org/t/p/w185/lUFK7ElGCk9kVEryDJHICeNdmd1.jpg" alt="Carátula de Flash" title="Carátula de Flash">
+                                    </div>
+                                    <div class="col-8">
+                                        <header class="series media header">
+                                            <h3 class="series media title">The Flash</h3>
+                                            
+                                        </header>
+                                        <div class="meta">
+                                            <div class="categories">
+                                                <ul>
+                                                    <li>Acción</li>
+                                                    <li>Aventura</li>
+                                                    <li>Drama</li>
+                                                </ul>
+                                            </div>
+                                            <time class="realease date" datetime="2014-03-12" 2014></time>
+                                            <div class="rating">7.1</div>
+                                            <p class="overview ">
+                                                Después de que un acelerador de partículas cause una extraña tormenta, al investigador científico de la policía, Barry Allen, le cae un rayo y entra en coma. Meses…
+                                            </p>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </a>
+                        </article>
                     </div>
-                </a>
-            </article>
-        </section>
+                </div>
+            </section>
+        </div>
     </main>
     <footer class="web footer">
         <nav>

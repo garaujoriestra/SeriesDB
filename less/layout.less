@@ -1,0 +1,23 @@
+//Layout container
+
+.container{
+	width: @desktop-width;
+	margin: auto;
+}
+
+
+//grid
+.grid-generator(@columns, @i: 1) when (@i <= @columns){
+	.col-@{i}{
+		width: @i * (100%/@columns);
+		float: left;
+		display: block;
+	}
+	.grid-generator(@columns, (@i + 1));
+}
+.row{
+	.grid-generator(12);
+	.clearfix();
+	//div[class*="col-"]:nth-child(odd){background:#999;}
+}
+

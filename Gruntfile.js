@@ -16,8 +16,6 @@ module.exports = function (grunt) {
 				options: {
 					spawn: false //par que no se quee tostado (creo)
 				}
-
-				
 			}
 		}
 	};

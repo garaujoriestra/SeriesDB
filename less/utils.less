@@ -1,0 +1,23 @@
+.horizontal-list(){ //no se genera pq es abstracta
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	li{
+		display: inline;
+	}
+}
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+.img-responsive(){
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
