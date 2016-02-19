@@ -9,19 +9,29 @@
 
 <body>
     <header class="web header">
-        <div class="brand">Series DB</div>
-        <nav>
-            <ul>
-                <li><a href="#" title="Descubre series y películas a tu gusto">Descubrir</a></li>
-                <li><a href="#" title="Catálogo de películas">Películas</a></li>
-                <li><a href="#" title="Catálogo de series">Serie</a></li>
-                <li><a href="#" title="Listado de actores y actrice de series y películas">Actores y actrices</a></li>
-            </ul>
-        </nav>
-        <form action="" class="search form">
-            <input type="search" id="search" name="q" placeholder="Buscar...">
-            <button type="search">Buscar</button>
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="brand">Series DB</div>
+                </div>
+                <div class="col-6">
+                    <nav class="main menu">
+                        <ul>
+                            <li><a href="#" title="Descubre series y películas a tu gusto">Descubrir</a></li>
+                            <li><a href="#" title="Catálogo de películas">Películas</a></li>
+                            <li><a href="#" title="Catálogo de series">Serie</a></li>
+                            <li><a href="#" title="Listado de actores y actrice de series y películas">Actores y actrices</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-3">
+                    <form action="" class="search form">
+                        <input type="search" id="search" name="q" placeholder="Buscar...">
+                        <button type="search">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="web main">
         <section class="series media list">

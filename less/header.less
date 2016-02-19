@@ -1,0 +1,33 @@
+.web.header{
+	background-color: @apple;
+	.brand{
+		font-size: 32px;
+		font-family: @font-family-serif;
+
+	}
+	.main.menu{
+		ul{
+			.horizontal-list();
+			text-align: center;
+			margin-left: 4px;
+			li{
+				margin-left: -4px;
+			}
+			a{
+				text-decoration: none;
+				background-color: darken(@apple,30%);
+				color: white;
+				padding: 10px 20px;
+				transition: background 250ms;
+				display: inline-block;
+				&:hover{
+					background-color: darken(@apple,20%)
+				}
+			}
+		}
+	}
+	form.search.form {
+	    margin-top: 8px;
+	}
+}
+
