@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+Amodule.exports = function (grunt) {
 
 	//Configuracion de Grunt
 	var settings = {

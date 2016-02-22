@@ -1,0 +1,43 @@
+.media.item{
+	height: 320px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 30px;
+
+	.cover{
+		overflow: hidden;
+	}
+	&:hover{
+		img{
+			transform: scale(1.2);
+		}
+	}
+
+	.link{
+		color: @main-text-color;
+	}
+	img { 
+		transition: transform 250ms;
+		.img-responsive();
+	}
+	.wrapper{
+		margin: 0 15px 15px 15px;
+ 	}
+ 	.title{
+ 		font-size: 20px;
+ 		margin: 0 0 15px 0;
+ 	}
+ 	.categories ul{
+		.horizontal-list();
+		li:after{
+			content: ",";
+		}
+		li:last-child:after{
+			content: "";
+		}
+ 	}
+ 	.rating{
+		margin-left: 20px;
+ 		display: inline-block;
+ 	}
+}
