@@ -1,18 +1,10 @@
 .media.item{
-	height: 320px;
-	overflow: hidden;
 	text-overflow: ellipsis;
 	margin-bottom: 30px;
 
 	.cover{
 		overflow: hidden;
 	}
-	&:hover{
-		img{
-			transform: scale(1.2);
-		}
-	}
-
 	.link{
 		color: @main-text-color;
 	}
@@ -20,12 +12,10 @@
 		transition: transform 250ms;
 		.img-responsive();
 	}
-	.wrapper{
-		margin: 0 15px 15px 15px;
- 	}
+	
  	.title{
  		font-size: 20px;
- 		margin: 0 0 15px 0;
+ 		margin: 0px;
  	}
  	.categories ul{
 		.horizontal-list();
@@ -40,4 +30,22 @@
 		margin-left: 20px;
  		display: inline-block;
  	}
+ 	.perspective{
+ 		perspective: 4000px;
+ 	}
+ 	.video{
+ 		width: 101%;
+ 		height: 451px;
+    	background: black;		
+		animation: bounceInDown 2s;
+		transform: rotateY(-50deg);
+		box-shadow: 125px 30px 15px rgba(0, 0, 0, 0.4);
+		.if-is-mobile({
+			animation: none;
+		});
+ 	}
+}
+.item-wrapper{
+	margin: 0 15px 15px 15px;
+	padding: 12px;
 }

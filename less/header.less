@@ -1,5 +1,6 @@
 .web.header{
 	background-color: @apple;
+	color: white;
 	.brand{
 		font-size: 32px;
 		font-family: @font-family-serif;
@@ -15,7 +16,6 @@
 			}
 			a{
 				text-decoration: none;
-				background-color: darken(@apple,30%);
 				color: white;
 				padding: 10px 20px;
 				transition: background 250ms;
@@ -25,9 +25,29 @@
 				}
 			}
 		}
+		.if-is-mobile({
+			display: none;
+		});
 	}
 	form.search.form {
-	    margin-top: 8px;
+	    margin-top: 10px;
+	    box-sizing: border-box;
+	    position: relative;
+	    padding: 0 10px;
+		.if-is-mobile({
+			display: none;
+		});
+		
+	    
 	}
+	#search {
+	    padding: 0 10px;
+	    border-radius: 24px!important;
+	    border: none;
+	    background-color: #e3e3e3;
+	    font-size: 16px;
+	}
+
+
 }
 
