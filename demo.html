@@ -5,25 +5,45 @@
 	<title>Demo Javascript</title>
 </head>
 <body>
-
-	<button id="changeBackgroundColor">Cambiar Color de fondo</button>
+	<div id="counter"></div>
+	<button id="startButton">Start</button>
+	<button  id="stopButton" disabled>Stop</button>
+	<button  id="resetButton" disabled>Reset</button>
 	<script>
-		document.body.style.transition = 'all 1s';
-		var timeoutID = null;
-		document.getElementById('changeBackgroundColor').addEventListener('click', function(event){
-			if (timeoutID != null){
-				clearTimeout(timeoutID);
+		var intervalID = null;
+
+		document.getElementById('resetButton').addEventListener('click', function(){
+			document.getElementById('counter').innerHTML = 0;
+			document.getElementById('startButton').disabled = false;
+			document.getElementById('stopButton').disabled = true;
+			document.getElementById('resetButton').disabled = true;
+		});
+		document.getElementById('stopButton').addEventListener('click', function(){
+			if (intervalID != null){
+				clearInterval(intervalID);
+				intervalID = null;
 			}
-			timeoutID = setTimeout(function(){
-				console.log('Ha terminado el timeout y cambio el  color');
-				var currentColor = document.body.style.backgroundColor;
-				if (currentColor == 'coral'){
-					document.body.style.backgroundColor = 'white';
-				}else{
-					document.body.style.backgroundColor = 'coral';
+			document.getElementById('startButton').disabled = false;
+			document.getElementById('stopButton').disabled = true;
+			document.getElementById('resetButton').disabled = false;
+		});
+
+		document.getElementById('startButton').addEventListener('click', function(){
+			if(intervalID != null){
+				return;
+			}
+			var counterValue = document.getElementById('counter').innerHTML;
+			document.getElementById('startButton').disabled = true;
+			document.getElementById('stopButton').disabled = false;
+			document.getElementById('resetButton').disabled = false;
+			intervalID = setInterval(function(){
+				if (isNaN(counterValue)){
+					counterValue = 0;
 				}
-				timeoutID = null;
-			}, 2000);
+				counterValue = parseInt(counterValue);
+				counterValue++;
+				document.getElementById('counter').innerHTML = counterValue;
+			}, 50)
 		});
 	</script>
 	
