@@ -9,19 +9,23 @@
 	<div id="container" style="background: red; padding: 20px;">
 		<div id="content" style="background: blue; padding: 20px;">this is the content</div>
 	</div>
+
+	<a href="http://www.google.es" target="_blank">Ir a Google</a>
 	<script>
 			 
 		document.getElementById('container').addEventListener('click', function(event){
 			console.log("CONTAINER CLICKED");
 		});
 		document.getElementById('content').addEventListener('click', function(event){
-			event.stopPropagation();
 			console.log('content clicked');
 		});
 		document.body.addEventListener('click', function(event){
 			console.log('BODY clicked');
 		});
-		
+		document.getElementsByTagName("a")[0].addEventListener('click', function(event){
+			console.log('Google Link');
+			event.preventDefault();
+		});
 	</script>
 	
 </body>
