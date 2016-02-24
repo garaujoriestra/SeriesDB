@@ -16,7 +16,8 @@
 
 			xhr.onreadystatechange = function() {
 				console.log( "onreadyStateChange", arguments);
-				document.getElementById('content').innerHTML = this.responseText;	
+				var parseado = JSON.parse(this.responseText);
+				document.getElementById('content').innerHTML = parseado.title;	
 			};
 			xhr.send();
 			console.log('envio XMLHttpRequest')
