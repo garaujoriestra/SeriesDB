@@ -27,7 +27,24 @@ $(document).ready(function(){
 			return false;
 		};
 
-		return true; //permito envio del form
+		$.ajax({
+			url: "/api/series/",
+			data: JSON.stringify({
+				title: titulo,
+				url : url
+			}),
+			dataType: 'json',
+			method: 'post',
+			contentType: 'application/json',
+			success: function(){
+				alert("guardad con exito");
+			},
+			error: function(){
+				alert("se ha producido un error");
+			}
+		});
+
+		return false; //permito envio del form
 	});
 
 });
