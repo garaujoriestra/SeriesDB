@@ -10,7 +10,7 @@
     <h1>Nueva serie</h1>
     <form action="" novalidate>
         <div>
-            <input type="text" id="title" name="title" placeholder="Título de la serie" required>
+            <input type="text" id="title" class="auto-focus" name="title" placeholder="Título de la serie" required>
         </div>
         <div>
         	<input type="url" id="cover_url" name="cover_url" placeholder="URL de la imagen de portada" pattern="^https?://[a-z0-9]+\.[a-z0-9]+/.+">
@@ -52,7 +52,7 @@
             <ul>
                 <li>
                     <label>
-                        <input type="radio" name="age_cal" value="gt7" required>Todos los públicos</label>
+                        <input type="radio" name="age_cal" value="gt7" required checked>Todos los públicos</label>
                 </li>
                 <li>
                     <label>
@@ -77,6 +77,14 @@
             <button type="submit">Crear serie</button>
         </div>
     </form>
+    <hr>
+    <button id="reloadSeriesButton">Recargar Series</button>
+    <ul id="seriesList">
+        <li>No hay series</li>
+    </ul>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="js/src/app.js"></script>
 </body>
 
 </html>

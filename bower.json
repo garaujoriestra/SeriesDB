@@ -1,0 +1,23 @@
+{
+  "name": "seriesdb",
+  "description": "An awesome clone of the Movies Database to learn HTML5, CSS3 and JavaScript",
+  "main": "index.js",
+  "authors": [
+    "Guillermo Araujo"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/garaujoriestra/SeriesDB",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6"
+  }
+}
