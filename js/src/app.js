@@ -28,13 +28,13 @@ $(document).ready(function(){
 		};
 
 		$.ajax({
+			method: 'post',
 			url: "/api/series/",
 			data: JSON.stringify({
 				title: titulo,
 				url : url
 			}),
 			dataType: 'json',
-			method: 'post',
 			contentType: 'application/json',
 			success: function(){
 				alert("guardad con exito");
@@ -44,7 +44,44 @@ $(document).ready(function(){
 			}
 		});
 
-		return false; //permito envio del form
+		return false; 
 	});
 
+	function reloadSeries(){
+		console.log('Cargando Series');	
+		$.ajax({
+			url: "/api/series/",
+			success: function(data){
+				console.log("/api/series",data);
+				var html ="";
+				for (var i in data){
+					var id = data[i].id;
+					var title = data[i].title;
+					var url = data[i].url || "";
+					html += "<li>";
+					html += title;
+					html += "(" + url + ")";
+					html += '<button data-serieid="'+id+'">Eliminar</button>';
+					html += "</li>";
+				}
+				$("#seriesList").html(html);
+			}
+		});
+	}
+	$("#reloadSeriesButton").on("click", reloadSeries);
+
+	reloadSeries();
+
+	$("#seriesList").on("click","button", function(){
+		console.log("elimino la serie");
+		var self = this;
+		var id = $(self).data("serieid");
+		$.ajax({
+			url: "/api/series/" + id,
+			method : "delete",
+			success: function(){
+				$(self).parent().remove();
+			}
+		});
+	});
 });
