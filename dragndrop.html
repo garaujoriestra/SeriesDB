@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.drag{
+			width: 100px;
+			height: 100px;
+			background: gold;
+			margin-right: 10px;
+			float: left;
+		}
+		#drop{
+			width: 100%;
+			height: 200px;
+			background: black;
+			color: white;
+			position: fixed;
+			bottom: 0px;
+			transition: background 250ms;
+		}
+		#drop.ok{
+			background: lightgreen;
+		}
+		#drop.error{
+			background-color: tomato;
+		}
+	</style>
+</head>
+<body>
+<div class="drag" draggable="true" data-movie-id="A">A</div>
+<div class="drag" draggable="true" data-movie-id="B">B</div>
+
+<div id="drop"></div>	
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+	var draggedMovieId = null;
+	$(".drag").on("dragstart",function(event){
+		console.log("DRAG START",event);
+		var movieID = $(this).data("movieId");
+		draggedMovieId = movieID;
+		event.originalEvent.dataTransfer.setData("movieID", movieID); 
+	});
+	$(".drag").on("dragend",function(event){
+		console.log("DRAG END",event);
+		draggedMovieId = null;
+	});
+	$("#drop").on("dragover", function(event){
+				event.preventDefault();
+
+		console.log('dragleave',event,draggedMovieId);
+
+		if ( draggedMovieId == "A"){
+			$(this).addClass("ok");
+		}else{
+			$(this).addClass("error");
+
+		}
+	}).on("dragleave", function(event){
+
+		event.preventDefault();
+
+		console.log('dragleave',event);
+		$(this).removeClass("ok error");
+	}).on("drop", function(event){
+		event.preventDefault();
+		console.log('drop',event);
+		var movieId = event.originalEvent.dataTransfer.getData("movieID");
+		if ( movieId != "B"){
+			var text = $(this).text();
+			text += movieId;
+			$(this).text(text);
+		}
+			$(this).removeClass("ok error");
+
+
+	});
+
+
+</script>
+</body>
+</html>
